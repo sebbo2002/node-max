@@ -1,0 +1,17 @@
+{
+	"private": true,
+	"name": "node-maexle",
+	"description": "A node.js module to talk to a MAX! Cube.",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/maexl2/node-maexle.git"
+	},
+	"author": "Sebastian Pekarek <mail@sebbo.net>",
+	"main": "./lib/maexle.js",
+	"scripts": {
+		"test": "istanbul cover _mocha -- -R spec -t 5000 -s 1000"
+	},
+	"license": "MIT",
+	"dependencies": {}
+}
