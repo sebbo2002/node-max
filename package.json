@@ -13,7 +13,9 @@
   },
   "license": "MIT",
   "preferGlobal": false,
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.7.0",

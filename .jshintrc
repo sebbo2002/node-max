@@ -17,7 +17,7 @@
   "expr":          false,
   "forin":         true,
   "funcscope":     false,
-  "globals":       {"describe": true, "it": true},
+  "globals":       {"describe": true, "it": true, "before": true, "after": true, "assert": true},
   "globalstrict":  false,
   "immed":         true,
   "indent":        4,
