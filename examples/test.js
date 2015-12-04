@@ -24,8 +24,15 @@ cube.on('device', function(device) {
     console.log('\nDevice: %s%s', device.name, device.getRoom() ? ' in room ' + device.getRoom().name : '');
 	console.log(device.toJSON());
     console.log(device.getConfig().toJSON());
+    console.log(device.getStatus().toJSON());
+
+    device.getStatus().on('change', function() {
+        console.log('\nDevice %s: status update', device.name);
+        console.log(device.getStatus().toJSON());
+    });
 });
 
-setTimeout(function() {
-	cube.connection().close();
-}, 2000);
+process.on('SIGINT', function() {
+    console.log('Close cube connection…');
+    cube.close();
+});
