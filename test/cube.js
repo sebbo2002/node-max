@@ -13,6 +13,9 @@ describe('cube module', function() {
 			cb();
 		});
 	});
+    after(function(cb) {
+        cube.close(cb);
+    });
 
 	describe('#constructor()', function() {
 		describe('#get/set/toJSON', function() {
@@ -48,6 +51,10 @@ describe('cube module', function() {
 				assert.throws(function() {
 					cube.get('foo');
 				}, /Unknown attribute/);
+			});
+
+			it('should have working attributes', function() {
+				assert.ok(cube.serial);
 			});
 
 			it('should have a working toJSON()', function() {
