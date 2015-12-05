@@ -2,4 +2,4 @@
  * node-maexle
  */
 
-module.exports = require('./lib/maexle.js');
+module.exports = require('./lib/index.js');

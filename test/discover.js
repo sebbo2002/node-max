@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = require('assert'),
 	maexle = require('../'),
 	Discover = maexle.Discover;
@@ -24,11 +26,10 @@ describe('discover module', function() {
 			discover.once('cube', function(cube) {
 				discover.end();
 
-				var cubeInstance = cube.connect();
-				assert.ok(cubeInstance);
-				assert.ok(cubeInstance instanceof maexle.Cube);
-
-				cb();
+				var instance = cube.connect();
+				assert.ok(instance);
+				assert.ok(instance instanceof maexle.Cube);
+				instance.close(cb);
 			});
 		});
 	});
