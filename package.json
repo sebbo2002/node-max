@@ -1,17 +1,17 @@
 {
-  "name": "node-maexle",
+  "name": "@maexle/node-max",
   "description": "A node.js module to communicate with a MAX! Cube.",
-  "author": "Sebastian Pekarek <mail@sebbo.net>",
+  "author": "Sebastian Pekarek <sebbo@maexleapp.com>",
   "version": "0.1.0-dev",
   "repository": {
     "type": "git",
     "url": "ssh://git@git.sebbo.net:10022/maexle/node-max.git"
   },
-  "main": "./lib/maexle.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "grunt && istanbul cover _mocha -- -R spec -t 5000 -s 1000"
   },
-  "license": "MIT",
+  "license": "GNU GPL 3.0",
   "preferGlobal": false,
   "dependencies": {
     "lodash": "^3.10.1"
